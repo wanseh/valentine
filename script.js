@@ -69,5 +69,14 @@ $(document).ready(function() {
             }, 2000);
         }
     }
+
+    $("#backgroundMusic")[0].play().catch(function(error) {
+        console.log("Auto-play was prevented by the browser.");
+        
+        // Optional: prompt user interaction to start music
+        $(document).one('click', function() {
+            $("#backgroundMusic")[0].play();
+        });
+    });
 });
 
