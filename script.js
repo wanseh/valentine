@@ -63,8 +63,10 @@ $(document).ready(function() {
     function checkCompleteVisit() {
         if (counter === 4) {
             setTimeout(function() {
-                $("#question").css('display', 'flex');
-            }, 2000)
+                $("#question").fadeIn('slow', function() {
+                    $(this).css('display', 'flex');
+                });
+            }, 2000);
         }
     }
 });
